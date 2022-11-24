@@ -17,13 +17,16 @@ interface Picture {
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
+
+// @Component => class XXComponent
+// XXComponent => xx.component.ts
 export class AppComponent {
   title = 'my-app-01';
 
   // today: Date = new Date();
   today = new Date();
 
-  // display state 
+  // display state
   display = false;
 
   users: User[] = [
@@ -39,7 +42,6 @@ export class AppComponent {
 
   toggleDisplayState(): void {
     this.display = !this.display;
-    debugger
   }
 
 }
