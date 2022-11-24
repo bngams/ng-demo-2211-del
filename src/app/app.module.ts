@@ -3,10 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ExponentialStrengthPipe } from './pipes/exponential-strength.pipe';
 
 @NgModule({
+  // customElements.define('app-root', AppComponent)
   declarations: [
-    AppComponent
+    AppComponent,
+    ExponentialStrengthPipe
   ],
   imports: [
     BrowserModule,
