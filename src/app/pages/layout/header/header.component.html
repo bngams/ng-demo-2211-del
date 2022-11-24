@@ -4,7 +4,21 @@
     <mat-icon>menu</mat-icon>
   </button>
   <span>My App</span>
-  <span class="example-spacer"></span>
+  <span class="spacer"></span>
+  <!-- could be another component -->
+  <nav>
+    <ul class="menu">
+      <li class="menu-item">
+        <a routerLink="/home" routerLinkActive="menu-link-active">
+          Home
+        </a>
+      </li>
+      <li class="menu-item"><a routerLink="/get-started" routerLinkActive="menu-link-active">Get Started</a></li>
+      <li class="menu-item"><a routerLink="/event" routerLinkActive="menu-link-active">Events</a></li>
+      <li class="menu-item">Login</li>
+    </ul>
+  </nav>
+
   <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
     <mat-icon>favorite</mat-icon>
   </button>

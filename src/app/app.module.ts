@@ -5,8 +5,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ExponentialStrengthPipe } from './pipes/exponential-strength.pipe';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HeaderComponent } from './components/header/header.component';
+import { HeaderComponent } from './pages/layout/header/header.component';
 import { MaterialModule } from './utils/material.module';
+import { HomeComponent } from './pages/home/home.component';
+import { GetStartedComponent } from './pages/get-started/get-started.component';
+import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 // import { MATERIAL_MODULES } from './utils/material.barel';
 
 @NgModule({
@@ -14,7 +17,10 @@ import { MaterialModule } from './utils/material.module';
   declarations: [
     AppComponent,
     ExponentialStrengthPipe,
-    HeaderComponent
+    HeaderComponent,
+    HomeComponent,
+    GetStartedComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
