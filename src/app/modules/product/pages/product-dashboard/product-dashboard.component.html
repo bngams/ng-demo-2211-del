@@ -1,3 +1,3 @@
 <h1>Product dashboard</h1>
-<app-product-form></app-product-form>
-<app-product-list></app-product-list>
+<app-product-form (productSubmit)="addProduct($event)"></app-product-form>
+<app-product-list [productsFromDashboard]="productsDashboard"></app-product-list>

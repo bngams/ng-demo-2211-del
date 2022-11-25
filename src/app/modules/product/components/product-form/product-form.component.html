@@ -1,11 +1,28 @@
-<form class="example-form">
+<!-- REACTIVE FORM -->
+<form [formGroup]="productForm" class="example-form" (ngSubmit)="submit()">
   <mat-form-field appearance="fill">
     <mat-label>Name</mat-label>
-    <input matInput placeholder="name..." name="title">
+    <input matInput placeholder="name..." name="title" formControlName="title">
   </mat-form-field>
   <mat-form-field appearance="fill">
     <mat-label>Price</mat-label>
-    <input matInput placeholder="price..." name="price">
+    <input matInput placeholder="price..." name="price" formControlName="price">
   </mat-form-field>
-  <button type="submit" mat-raised-button color="primary">Submit</button>
+  <button type="submit" mat-raised-button color="primary" [disabled]="!productForm.valid">Submit</button>
 </form>
+
+<!-- TEMPLATE DRIVEN -->
+<!-- <form #productForm="ngForm" class="example-form" (ngSubmit)="submit()">
+  <div class="errors" *ngIf="errors">
+    {{ errors }}
+  </div>
+  <mat-form-field appearance="fill">
+    <mat-label>Name</mat-label>
+    <input matInput placeholder="name..." name="title" [(ngModel)]="product.title" required>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Price</mat-label>
+    <input matInput placeholder="price..." name="price" [(ngModel)]="product.price" min="1">
+  </mat-form-field>
+  <button type="submit" mat-raised-button color="primary" [disabled]="!productForm.valid">Submit</button>
+</form> -->

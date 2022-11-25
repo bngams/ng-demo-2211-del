@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { PRODUCTS_MOCK } from '../../mocks/products.mocks';
 import { Product } from '../../models/product';
+import { ProductService } from '../../services/product.service';
 
 @Component({
   selector: 'app-product-list',
@@ -8,10 +9,13 @@ import { Product } from '../../models/product';
   styleUrls: ['./product-list.component.scss']
 })
 export class ProductListComponent implements OnInit {
+  @Input()
+  productsFromDashboard!: Product[];
+
   products: Product[] = [];
 
   // used for dependency injection 
-  constructor() { }
+  constructor(public productService: ProductService) { }
 
   // init component
   ngOnInit(): void {
