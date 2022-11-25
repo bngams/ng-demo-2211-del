@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { ExponentialStrengthPipe } from './pipes/exponential-strength.pipe';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './pages/layout/header/header.component';
-import { MaterialModule } from './utils/material.module';
+import { SharedModule } from './utils/shared.module';
 import { HomeComponent } from './pages/home/home.component';
 import { GetStartedComponent } from './pages/get-started/get-started.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
@@ -26,7 +26,7 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -11,6 +11,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent},
   { path: 'get-started', component: GetStartedComponent },
   { path: 'event', canLoad: [], loadChildren: () => import('./modules/event/event.module').then(m => m.EventModule)},
+  { path: 'product', canLoad: [], loadChildren: () => import('./modules/product/product.module').then(m => m.ProductModule)},
   // ** still at the end
   { path: '**', component: PageNotFoundComponent },
 ];
