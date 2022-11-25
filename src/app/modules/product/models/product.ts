@@ -6,7 +6,7 @@ export type Product = {
   imgUrl?: string;
 }
 
-export interface ProductI {
+export interface ProductType {
   id?: number;
   title: string;
   price: number;

@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from './material.module';
@@ -7,7 +8,8 @@ import { MaterialModule } from './material.module';
   exports: [
     MaterialModule, 
     FormsModule, // template driven forms availabilty
-    ReactiveFormsModule
+    ReactiveFormsModule, 
+    HttpClientModule
   ]
 })
 export class SharedModule { }
